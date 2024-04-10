@@ -2,10 +2,6 @@
 
 $size: 180px;
 $radius: 8px;
-$primary: #007bff;
-$base: #f8f9fa;
-$note-bg: #f5f5f5;
-$note-text: #333;
 $firework-color: #ffcc00;
 
 .box {
@@ -29,7 +25,7 @@ $firework-color: #ffcc00;
     color: $note-text;
     font-size: 24px;
     font-weight: bold;
-    transition: opacity 0.3s ease-in-out; /* Transición de opacidad */
+    transition: opacity 0.3s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     &:not(:last-child) {
@@ -37,7 +33,7 @@ $firework-color: #ffcc00;
     }
 
     &.hide {
-      opacity: 0; /* Oculta el elemento */
+      opacity: 0;
     }
   }
 
