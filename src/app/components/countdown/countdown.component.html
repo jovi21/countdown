@@ -1,0 +1,12 @@
+<div *ngIf="timeLeft">
+  <h1>Proximamente</h1>
+  <div class="box">
+    <div class="box--item" *ngIf="timeLeft.days > 0"> {{ timeLeft.days }} días</div>
+    <div class="box--item" *ngIf="timeLeft.hours > 0"> {{ timeLeft.hours }} horas</div>
+    <div class="box--item" *ngIf="timeLeft.minutes > 0"> {{ timeLeft.minutes }} minutos</div>
+    <div class="box--item"> {{ timeLeft.seconds }} segundos</div>
+  </div>
+</div>
+<div *ngIf="!timeLeft">
+  <h1>Countdown Finished!</h1>
+</div>

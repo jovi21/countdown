@@ -1,0 +1,19 @@
+@import "../../../theme/colors";
+
+$size: 180px;
+$radius: 8px;
+
+.box {
+  display: flex;
+  gap: 8px;
+  &--item {
+    border-radius: $radius;
+    border: 1px solid $secondary;
+    width: $size;
+    height: $size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base;
+  }
+}
