@@ -21,8 +21,7 @@ $firework-color: #ffcc00;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $note-bg;
-    color: $note-text;
+    background-color: $base;
     font-size: 24px;
     font-weight: bold;
     transition: opacity 0.3s ease-in-out;
@@ -40,16 +39,25 @@ $firework-color: #ffcc00;
   &.fireworks {
     animation: fireworks 2s infinite;
   }
+}
 
-  @keyframes fireworks {
-    0% {
-      box-shadow: 0 0 10px 3px $firework-color;
+@media (max-width: 768px) {
+  .box {
+    &--item {
+      height: 80px;
+      width: 80px;
     }
-    50% {
-      box-shadow: 0 0 20px 6px $secondary;
-    }
-    100% {
-      box-shadow: 0 0 10px 3px $firework-color;
-    }
+  }
+}
+
+@keyframes fireworks {
+  0% {
+    box-shadow: 0 0 10px 3px $firework-color;
+  }
+  50% {
+    box-shadow: 0 0 20px 6px $secondary;
+  }
+  100% {
+    box-shadow: 0 0 10px 3px $firework-color;
   }
 }
