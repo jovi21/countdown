@@ -1,12 +1,37 @@
 <div *ngIf="timeLeft">
   <h1>Proximamente</h1>
-  <div class="box">
-    <div class="box--item" *ngIf="timeLeft.days > 0"> {{ timeLeft.days }} días</div>
-    <div class="box--item" *ngIf="timeLeft.hours > 0"> {{ timeLeft.hours }} horas</div>
-    <div class="box--item" *ngIf="timeLeft.minutes > 0"> {{ timeLeft.minutes }} minutos</div>
-    <div class="box--item"> {{ timeLeft.seconds }} segundos</div>
+  <br />
+  <br />
+  <div class="box fireworks">
+    <div
+      class="box--item"
+      *ngIf="timeLeft.days > 0"
+      [class.animated]="timeLeft.days > 0"
+    >
+      <h2>{{ timeLeft.days }}</h2>
+      <h4>días</h4>
+    </div>
+    <div
+      class="box--item"
+      *ngIf="timeLeft.hours > 0"
+      [class.animated]="timeLeft.hours > 0"
+    >
+      <h2>{{ timeLeft.hours }}</h2>
+      <h4>horas</h4>
+    </div>
+    <div
+      class="box--item"
+      [class.hide]="timeLeft.minutes === 0 && timeLeft.seconds === 0"
+    >
+      <h2>{{ timeLeft.minutes }}</h2>
+      <h4>minutos</h4>
+    </div>
+    <div class="box--item" [class.hide]="timeLeft.seconds === 0">
+      <h2>{{ timeLeft.seconds }}</h2>
+      <h4>segundos</h4>
+    </div>
   </div>
 </div>
 <div *ngIf="!timeLeft">
-  <h1>Countdown Finished!</h1>
+  <h1>¡Contador finalizado!</h1>
 </div>

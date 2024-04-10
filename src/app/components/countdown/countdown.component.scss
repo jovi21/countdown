@@ -1,19 +1,59 @@
-@import "../../../theme/colors";
+@import "./../../../theme/colors";
 
 $size: 180px;
 $radius: 8px;
+$primary: #007bff;
+$base: #f8f9fa;
+$note-bg: #f5f5f5;
+$note-text: #333;
+$firework-color: #ffcc00;
 
 .box {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  padding: 16px;
+  border-radius: $radius;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
   &--item {
     border-radius: $radius;
     border: 1px solid $secondary;
     width: $size;
     height: $size;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $base;
+    background-color: $note-bg;
+    color: $note-text;
+    font-size: 24px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out; /* Transición de opacidad */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &.hide {
+      opacity: 0; /* Oculta el elemento */
+    }
+  }
+
+  &.fireworks {
+    animation: fireworks 2s infinite;
+  }
+
+  @keyframes fireworks {
+    0% {
+      box-shadow: 0 0 10px 3px $firework-color;
+    }
+    50% {
+      box-shadow: 0 0 20px 6px $secondary;
+    }
+    100% {
+      box-shadow: 0 0 10px 3px $firework-color;
+    }
   }
 }
