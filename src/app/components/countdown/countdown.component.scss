@@ -27,10 +27,6 @@ $firework-color: #ffcc00;
     transition: opacity 0.3s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-
     &.hide {
       opacity: 0;
     }
@@ -41,12 +37,15 @@ $firework-color: #ffcc00;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .box {
     &--item {
       height: 80px;
-      width: 80px;
+      width: 100%;
     }
+  }
+  h4 {
+    font-size: 12px;
   }
 }
 

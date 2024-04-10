@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { ContainerComponent } from './components/container/container.component';
+import { TurtleComponent } from './components/turtle/turtle.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CountdownComponent, ContainerComponent],
+  declarations: [AppComponent, HomeComponent, CountdownComponent, ContainerComponent, TurtleComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
