@@ -1,6 +1,12 @@
 <div *ngIf="timeLeft">
   <br />
-  <h3>Proximamente</h3>
+  <h1>Proyecto tortuga empezó</h1>
+  <br />
+  <div class="info fireworks">
+    <h3>
+      Estamos teniendo fuertes lluvias, la fecha puede estar sujeta a cambios!!!
+    </h3>
+  </div>
   <br />
   <br />
   <div class="box fireworks">
@@ -20,19 +26,19 @@
       <h2>{{ timeLeft.hours }}</h2>
       <h4>horas</h4>
     </div>
-    <div
-      class="box--item"
-      [class.hide]="timeLeft.minutes === 0 && timeLeft.seconds === 0"
-    >
+    <div class="box--item">
       <h2>{{ timeLeft.minutes }}</h2>
       <h4>minutos</h4>
     </div>
-    <div class="box--item" [class.hide]="timeLeft.seconds === 0">
+    <div class="box--item">
       <h2>{{ timeLeft.seconds }}</h2>
       <h4>segundos</h4>
     </div>
   </div>
+  <br />
+  <br />
+  <app-turtle></app-turtle>
 </div>
 <div *ngIf="!timeLeft">
-  <h1>¡Contador finalizado!</h1>
+  <app-proposal></app-proposal>
 </div>

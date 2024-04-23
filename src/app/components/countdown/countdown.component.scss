@@ -4,6 +4,13 @@ $size: 180px;
 $radius: 8px;
 $firework-color: #ffcc00;
 
+.info {
+  padding: 16px;
+  border-radius: $radius;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: red;
+}
+
 .box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -31,10 +38,10 @@ $firework-color: #ffcc00;
       opacity: 0;
     }
   }
+}
 
-  &.fireworks {
-    animation: fireworks 2s infinite;
-  }
+.fireworks {
+  animation: fireworks 2s infinite;
 }
 
 @media (max-width: 850px) {

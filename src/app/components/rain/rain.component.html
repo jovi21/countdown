@@ -1,0 +1,8 @@
+<div class="rain">
+  <div
+    class="raindrop"
+    *ngFor="let drop of raindrops; let i = index"
+    [style.left.px]="drop.left"
+    [style.animation-delay]="drop.delay"
+  ></div>
+</div>
