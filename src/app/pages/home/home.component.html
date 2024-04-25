@@ -1,6 +1,6 @@
 <div class="lightning">
   <app-container>
     <app-countdown [endDate]="endDate"></app-countdown>
-    <app-rain></app-rain>
+    <app-rain [ngClass]="{ hide: hideRain() }"></app-rain>
   </app-container>
 </div>

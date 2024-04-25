@@ -44,6 +44,10 @@ $firework-color: #ffcc00;
   animation: fireworks 2s infinite;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 @media (max-width: 850px) {
   .box {
     &--item {
