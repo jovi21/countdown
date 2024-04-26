@@ -10,19 +10,11 @@
   <br />
   <br />
   <div class="box fireworks">
-    <div
-      class="box--item"
-      *ngIf="timeLeft.days > 0"
-      [class.animated]="timeLeft.days > 0"
-    >
+    <div class="box--item" [class.animated]="timeLeft.days > 0">
       <h2>{{ timeLeft.days }}</h2>
       <h4>días</h4>
     </div>
-    <div
-      class="box--item"
-      *ngIf="timeLeft.hours > 0"
-      [class.animated]="timeLeft.hours > 0"
-    >
+    <div class="box--item" [class.animated]="timeLeft.hours > 0">
       <h2>{{ timeLeft.hours }}</h2>
       <h4>horas</h4>
     </div>
